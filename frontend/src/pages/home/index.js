@@ -3,6 +3,8 @@ import {Container, InputGroup, FormControl, Button, Alert, Spinner} from 'react-
 import Header from '../../components/header';
 import {ContentContainer, Form} from './styles'
 import ShortenerService from '../../services/shortenerService'
+import { AdsBlock } from './styles'
+
 
 class Home extends React.Component {
     constructor(props){
@@ -52,7 +54,7 @@ class Home extends React.Component {
                 <Header> Simples como uma torta! </Header>
                 <ContentContainer>
                     <Form onSubmit= {this.handleSubmit}>
-                        <InputGroup>
+                        <InputGroup className={"mb-3"}>
 
                             <FormControl
                                 placeholder="Digite a url para encurtar"
@@ -77,11 +79,11 @@ class Home extends React.Component {
                                             ref={(input) => this.inputURL = input}
                                         />
 
-                                        <InputGroup.Append>
-                                            <Button variant="ourline-secondary" onClick={() => this.copyToClipboard()} >Copiar</Button>
+                                        <InputGroup.Append className={"mb-3"}>
+                                            <Button variant="outline-secondary" onClick={() => this.copyToClipboard()} >Copiar</Button>
                                         </InputGroup.Append>
                                     </InputGroup>
-                                    <p>Para acompanhar as estatísticas, acesse: https://URLwee.app/{code}</p>
+                                    <p>Para acompanhar as estatísticas, acesse: https://URLwee.app/{code}/stats</p>
 
                                 </>
                             )
@@ -90,7 +92,12 @@ class Home extends React.Component {
                         {errorMSG && <Alert variant="danger">{errorMSG}</Alert>}
 
                     </Form>
-                </ContentContainer>            
+                </ContentContainer>   
+                <ContentContainer>
+                    <AdsBlock>
+                        ADsense
+                    </AdsBlock>
+                </ContentContainer>         
             </Container>
         )
     }
