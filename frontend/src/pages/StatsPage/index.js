@@ -8,6 +8,8 @@ import Header from '../../components/Header';
 import ShortenerService from '../../services/shortenerService';
 import { StatsContainer, StatsBox, StatsRow, StatsBoxTitle } from './styles';
 
+import vars from '../../configs/vars';
+
 class StatsPage extends React.Component {
     constructor(props) {
         super(props);
@@ -55,7 +57,7 @@ class StatsPage extends React.Component {
                     </StatsContainer>
                 ) : (
                     <StatsContainer className="text-center">
-                        <p><b>http://upie.tk/{shortenedURL.code}</b></p>
+                        <p><b>{vars.HOST_APP + shortenedURL.code}</b></p>
                         <p>Redireciona para:<br/>{shortenedURL.url}</p>
                         <StatsRow>
                             <StatsBox>
