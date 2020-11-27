@@ -1,17 +1,15 @@
 import React from 'react';
-import {Logo, HeaderContainer} from './styles' 
-import LogoIcone from '../../assets/icone.png'
+import { Logo, HeaderContainer } from './styles';
+import Icone from '../../assets/icone.png'
 
-function Header(props){
-    return(
+function Header(props) {
+    return (
         <>
             <HeaderContainer>
-                <Logo src={LogoIcone} alt='URLwee - encurtador de url'/>
-                <h1>URLwee</h1>
+                <Logo src={Icone} alt='Upie - Encurtador de URL'/>
+                <h1>UPie</h1>
                 <p>{props.children}</p>
             </HeaderContainer>
-
-            
         </>
     )
 }

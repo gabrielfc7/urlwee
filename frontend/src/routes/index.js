@@ -1,28 +1,22 @@
 import React from 'react';
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-// URLwee.app/-> home
-// URLwee.app/:code -> redirect
-// URLwee.app/:code/stats -> stats
-// URLwee.app/* -> NotFound
-
-import home from '../pages/home';
-import redirect from '../pages/redirect';
-import stats from '../pages/stats';
-import NotFound from '../pages/NotFound';
+import HomePage from '../pages/HomePage';
+import RedirectPage from '../pages/RedirectPage';
+import StatsPage from '../pages/StatsPage';
+import NotFoundPage from '../pages/NotFoundPage';
 
 function Routes() {
     return (
         <BrowserRouter>
             <Switch>
-                <Route exact path="/" component={home} />
-                <Route exact path="/:code" component={redirect} />
-                <Route exact path="/:code/stats" component={stats} />
-                <Route exact path="/*" component={NotFound} />
+                <Route exact path="/" component={HomePage} />
+                <Route exact path="/:code" component={RedirectPage} />
+                <Route exact path="/:code/stats" component={StatsPage} />
+                <Route exact path="/*" component={NotFoundPage} />
             </Switch>
         </BrowserRouter>
     )
 }
-
 
 export default Routes;

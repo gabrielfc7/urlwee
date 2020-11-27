@@ -1,16 +1,15 @@
 import styled from 'styled-components';
 
-export const StatsContainer = styled.div `
+export const StatsContainer = styled.div`
     display: block;
-`
+`;
 
 export const StatsRow = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center !important;
     margin-bottom: 0.5rem;
-`
-
+`;
 
 export const StatsBox = styled.div`
     flex: 0 0 25%;
@@ -20,12 +19,10 @@ export const StatsBox = styled.div`
     border-radius: .25rem;
     text-align: center;
     margin: .5rem;
-
-`
+`;
 
 export const StatsBoxTitle = styled.div`
     font-weight: 500;
     padding: 0.25rem;
     display: block;
-
-`
+`;
